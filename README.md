@@ -31,7 +31,7 @@ demo
 | format-btn | Boolean | true| 是否显示格式化按钮 |
 | base-path  | String     | https://cdn.jsdelivr.net/npm/ace-builds@1.4.5/src-min-noconflict|ace资源位置，内置了js的资源，如果选择了其他语言需要从cdn库加载
 | theme | String | one_dark | 主题风格，内置one_dark,xcode |
-| mode  | String |   | 语言模式 |
+| mode  | String | javascript| 语言模式 |
 | max-lines | [String,Number] | 80 | 最大行数，超过会自动出现滚动条 |
 | min-lines  | [String,Number]     | 30 | 最小行数，还未到最大行数时，编辑器会自动伸缩大小|
 | font-size | [String,Number] | 18  | 字体大小 |
