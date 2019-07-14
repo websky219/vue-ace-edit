@@ -18,8 +18,8 @@ Vue.component('v-ace-edit', VueAceEdit)
  <v-code-edit v-model="code"> </v-code-edit>
 
 ```
+[在线demo ](https://websky219.github.io/vue-ace-edit/demo/ "demo")
 
-在线demo 
 
 ### props
 
