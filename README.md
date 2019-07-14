@@ -6,7 +6,7 @@
 
 暂时没有上传npm，可以下载js到项目中
 
-```javescript
+```node
 import { VueAceEdit } from './vue-ace-edit.umd.min.js'
 Vue.component('v-ace-edit', VueAceEdit)
 ```
