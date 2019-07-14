@@ -1,37 +1,48 @@
-## Welcome to GitHub Pages
+## vue-ace-edit
 
-You can use the [editor on GitHub](https://github.com/websky219/vue-ace-edit/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### 基于ace edit的在线代码编辑器，内置 xcode,one_dark主题，beautifier格式化插件
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### 使用
 
-### Markdown
+暂时没有上传npm，可以下载js到项目中
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+```
+import { VueAceEdit } from './vue-ace-edit.umd.min.js'
+console.log("ace", VueAceEdit)
+Vue.component('v-ace-edit', VueAceEdit)
+```
+也可以浏览器中直接加载使用
 
-```markdown
-Syntax highlighted code block
+```
+<script src="../dist/vue-ace-edit.umd.min.js"></script>
 
-# Header 1
-## Header 2
-### Header 3
+ <v-code-edit v-model="code"> </v-code-edit>
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+demo
 
-### Jekyll Themes
+### props
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/websky219/vue-ace-edit/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+| 属性 | 类型   | 默认值 | 描述 |
+| ----- | --------- | ----------- | ------- |
+| value | String |  | 编辑器默认值 绑定 v-model|
+| meun | Boolean | true | 是否显示顶上菜单 |
+| setting  | Boolean |true| 是否显示主题设置 |
+| format-btn | Boolean | true| 是否显示格式化按钮 |
+| base-path  | String     | https://cdn.jsdelivr.net/npm/ace-builds@1.4.5/src-min-noconflict|ace资源位置，内置了js的资源，如果选择了其他语言需要从cdn库加载
+| theme | String | one_dark | 主题风格，内置one_dark,xcode |
+| mode  | String |   | 语言模式 |
+| max-lines | [String,Number] | 80 | 最大行数，超过会自动出现滚动条 |
+| min-lines  | [String,Number]     | 30 | 最小行数，还未到最大行数时，编辑器会自动伸缩大小|
+| font-size | [String,Number] | 18  | 字体大小 |
+| wrap  | String | free  | 自动换行 |
+| indent-size | String| 2 | 格式化缩进2空格 |
+| show-print-margin  | showPrintMargin | true | 是否显示代码标尺(中间竖线) |
+| use-worker  | Boolean | true | 使用worker,语法检查使用的 |
 
-### Support or Contact
+### 事件
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+| 事件名 | 参数 | 说明|
+| ----- | --------- | ----------- |
+| init | edit对象 | 初始化事件 |
