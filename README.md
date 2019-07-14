@@ -6,14 +6,13 @@
 
 暂时没有上传npm，可以下载js到项目中
 
-```
+```javescript
 import { VueAceEdit } from './vue-ace-edit.umd.min.js'
-console.log("ace", VueAceEdit)
 Vue.component('v-ace-edit', VueAceEdit)
 ```
 也可以浏览器中直接加载使用
 
-```
+```html
 <script src="../dist/vue-ace-edit.umd.min.js"></script>
 
  <v-code-edit v-model="code"> </v-code-edit>
