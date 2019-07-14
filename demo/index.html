@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo</title>
+</head>
+
+<body>
+    <div id="app">
+        <v-code-edit v-model="code" @init="init">
+        </v-code-edit>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+<script src="../vue-ace-edit.umd.min.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data() {
+            return {
+                modal1: false,
+                code: "var code='holle word'"
+            }
+        },
+        methods: {
+            init(edit) {
+                this.edit = edit;
+                console.log(edit);
+            }
+        },
+    })
+</script>
+
+</html>
